@@ -1,0 +1,87 @@
+.seller-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .seller-dashboard header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .seller-dashboard h1 {
+    color: #2c3e50;
+  }
+  
+  .seller-dashboard button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-product {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .add-product h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .add-product input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-product button {
+    background: #27ae60;
+    padding: 10px 20px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .product-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .product-card button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+  }
+  
+  button.available {
+    background: #27ae60;
+  }
+  
+  button.unavailable {
+    background: #7f8c8d;
+  }

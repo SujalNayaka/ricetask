@@ -1,0 +1,49 @@
+.seller-login {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .seller-login h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .seller-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .seller-login input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .seller-login input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .seller-login button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .seller-login button:hover {
+    background: #2ecc71;
+  }

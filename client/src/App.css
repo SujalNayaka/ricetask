@@ -1,0 +1,61 @@
+/* Base Styles */
+:root {
+    --primary: #3498db;
+    --secondary: #2ecc71;
+    --danger: #e74c3c;
+    --warning: #f39c12;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .search-section {
+      flex-direction: column;
+    }
+    
+    .search-section input, 
+    .search-section button {
+      width: 100%;
+    }
+  }

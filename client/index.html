@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AgriLink - Connecting rice millers with buyers and logistics">
+    
+    <title>AgriLink | Rice Trading Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- iOS/Safari specific meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Android/Chrome specific meta tags -->
+    <meta name="theme-color" content="#27ae60">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <style>
+      /* Initial loading animation */
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #27ae60;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Initial loading screen (removed by React) -->
+    <div id="loading" class="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Root element where React app mounts -->
+    <div id="root"></div>
+    
+    <!-- Scripts will be injected by Vite -->
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Register service worker for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('ServiceWorker registration successful');
+          }).catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+      
+      // Remove loading screen when app mounts
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => loadingScreen.remove(), 500);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

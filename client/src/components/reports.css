@@ -1,0 +1,114 @@
+.reports-container {
+    padding: 20px;
+  }
+  
+  .reports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .download-btn, .print-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .download-btn {
+    background: #17a2b8;
+    color: white;
+    border: none;
+  }
+  
+  .print-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+  }
+  
+  .report-controls {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .report-type-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .report-type-btn {
+    padding: 8px 15px;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .report-type-btn.active {
+    background: #4e73df;
+    color: white;
+    border-color: #4e73df;
+  }
+  
+  .date-range-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .date-range-selector label {
+    font-weight: 500;
+  }
+  
+  .date-range-selector input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .generate-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .report-preview {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .report-placeholder {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed #eee;
+    border-radius: 8px;
+  }
+  
+  .chart-placeholder, .data-table-placeholder {
+    height: 200px;
+    background: #f8f9fa;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    border-radius: 8px;
+  }
+  
+  .data-table-placeholder {
+    height: 300px;
+  }
