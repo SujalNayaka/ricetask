@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { AuthProvider } from './context/AuthContext' // Import your AuthProvider
+import { AuthProvider } from './AuthContext' // Import your AuthProvider
 import SellerLogin from './components/seller/SellerLogin'
 import BuyerLogin from './components/buyer/BuyerLogin'
 import LorryLogin from './components/lorry/LorryLogin'
