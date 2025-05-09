@@ -29,7 +29,7 @@ const ServiceProvider = () => {
     };
 
     try {
-      const res = await fetch('https://ricelink-server.onrender.com/signinservices', {
+      const res = await fetch('https://ricetaskserver.vercel.app/signinservices', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -49,7 +49,7 @@ const ServiceProvider = () => {
     };
 
     try {
-      const res = await fetch('https://ricelink-server.onrender.com/orders', {
+      const res = await fetch('https://ricetaskserver.vercel.app/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -64,7 +64,7 @@ const ServiceProvider = () => {
 
   const fetchLogistics = async (order) => {
     try {
-      const res = await fetch('https://ricelink-server.onrender.com/logistics', { 
+      const res = await fetch('https://ricetaskserver.vercel.app/logistics', { 
         headers: { accept: 'application/json' } 
       });
       const result = await res.json();
@@ -80,8 +80,8 @@ const ServiceProvider = () => {
   const handleOrderAction = async (orderId, action) => {
     try {
       const endpoint = action === 'accept' 
-        ? 'https://ricelink-server.onrender.com/acceptorder' 
-        : 'https://ricelink-server.onrender.com/rejectorder';
+        ? 'https://ricetaskserver.vercel.app/acceptorder' 
+        : 'https://ricetaskserver.vercel.app/rejectorder';
       
       const data = {
         _id: orderId,
@@ -120,7 +120,7 @@ const ServiceProvider = () => {
         logimail: logistic.mail
       };
 
-      const res = await fetch('https://ricelink-server.onrender.com/booklogistics', {
+      const res = await fetch('https://ricetaskserver.vercel.app/booklogistics', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -145,7 +145,7 @@ const ServiceProvider = () => {
         [field]: value
       };
 
-      const res = await fetch(`https://ricelink-server.onrender.com/${field}edit`, {
+      const res = await fetch(`https://ricetaskserver.vercel.app/${field}edit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
