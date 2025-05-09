@@ -9,7 +9,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch('https://ricelink-server.onrender.com/api/orders', {
+        const response = await fetch('https://ricetaskserver.vercel.app/api/orders', {
           headers: { Authorization: `Bearer ${sessionStorage.getItem('authToken')}` }
         });
         const data = await response.json();
