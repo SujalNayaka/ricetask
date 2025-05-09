@@ -30,7 +30,7 @@ const Transport = () => {
     };
 
     try {
-      const res = await fetch('https://ricelink-server.onrender.com/transportservices', {
+      const res = await fetch('https://ricetaskserver.vercel.app/transportservices', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -50,7 +50,7 @@ const Transport = () => {
     };
 
     try {
-      const res = await fetch('https://ricelink-server.onrender.com/logisticorders', {
+      const res = await fetch('https://ricetaskserver.vercel.app/logisticorders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -66,8 +66,8 @@ const Transport = () => {
   const handleOrderAction = async (orderId, action) => {
     try {
       const endpoint = action === 'accept'
-        ? 'https://ricelink-server.onrender.com/accepttransportorder'
-        : 'https://ricelink-server.onrender.com/rejecttransportorder';
+        ? 'https://ricetaskserver.vercel.app/accepttransportorder'
+        : 'https://ricetaskserver.vercel.app/rejecttransportorder';
 
       const data = {
         _id: orderId,
