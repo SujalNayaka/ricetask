@@ -34,7 +34,7 @@ const Profile = () => {
 
   const handleSave = async () => {
     try {
-      const response = await fetch('https://ricelink-server.onrender.com/api/profile', {
+      const response = await fetch('https://ricetaskserver.vercel.app/api/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
